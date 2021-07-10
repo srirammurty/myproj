@@ -1,0 +1,43 @@
+{% extends  "structure.html" %}
+{% block main %}
+ 
+ <div class1="login-box">
+   <div style="margin:30px">
+      
+      <!--
+      <h2>Sign In</h2>
+      <form action="/login" method="post" >
+         <input placeholder="Enter login name" type="text" name="username" />
+         <input placeholder="Enter Password" type="password" name="password" />
+         <input class="submit" type="submit" />
+      </form>
+      <p>{{ message }}</p>
+      -->
+    <main class="form-signin">
+      <form action="/login" method="post" >
+          <div style="margin:auto">
+            <img  class="mb-4" src="static/img/logo.png" alt="" width="50" height="50">
+          </div>
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+          <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+              <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+          </div>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+          <div>New user <a style="font-weight:bold;text-decoration:none;color:rgb(83, 20, 230)" href="/signup">Sign Up</a></div>
+      </form>
+    </main>
+      
+   </div>
+ </div>
+ 
+  
+ 
+{% endblock main %}

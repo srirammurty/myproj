@@ -1,0 +1,36 @@
+{% extends  "structure.html" %}
+{% block main %}
+
+{% if message == 'admin' %}
+ <div class1="login-box">
+   <div style="margin:30px">
+    
+    <main class="form-signin">
+      <form action="/admin" method="post" >
+          <div style="margin:auto">
+            <img  class="mb-4" src="static/img/logo.png" alt="" width="50" height="50">
+          </div>
+          <h1 class="h3 mb-3 fw-normal">Provide Admin Password</h1>
+
+          <div class="form-floating">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+          </div>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+          
+      </form>
+    </main>
+      
+   </div>
+ </div>
+ {% endif %}
+ {% if message != 'admin' %}
+ {{ message }}
+ {% endif %}
+ <div>Back to <a style="font-weight:bold;text-decoration:none;color:rgb(83, 20, 230)" href="/dashboard">Dashboard</a></div>
+ 
+  
+ 
+{% endblock main %}

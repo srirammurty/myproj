@@ -1,0 +1,51 @@
+{% extends  "structure.html" %}
+{% block main %}
+ <h1> Sign up </h1>
+ <main class="form-signin">
+   <form action="/signup" method="post" >
+      <div style="margin:auto">
+         <img  class="mb-4" src="static/img/logo.png" alt="" width="50" height="50">
+      </div>
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+      <div class="form-floating">
+         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+         <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+         <input type="password" name="password1" class="form-control" id="floatingPassword" placeholder="Password">
+         <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+         <input type="password" name="password" class="form-control" id="floatingPassword1" placeholder="Password">
+         <label for="floatingPassword">Confirm password</label>
+      </div>
+      <div class="form-floating">
+         <input type="text" name="reset_qn" class="form-control" id="ResetQn" placeholder="Password Reset Question">
+         <label for="floatingInput">Password Reset Question</label>
+      </div>
+      <div class="form-floating">
+         <input type="text" name="reset_ans" class="form-control" id="ResetAns" placeholder="Password Reset Answer">
+         <label for="floatingInput">Password Reset Answer</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+      <div>Existing user <a style="font-weight:bold;text-decoration:none;color:rgb(83, 20, 230)" href="/">Sign In</a></div>
+   </form>
+ </main>
+ <div class="login-box">
+   <div style="margin:30px">
+      <form action="/signup" method="post" >
+         <input placeholder="Enter email" type="text" name="username" />
+         <input placeholder="Choose Password" type="password" name="password1" />
+         <input placeholder="Confirm Password" type="password" name="password" />
+         <input placeholder="Passwrord Reset Question" type="text" name="reset_qn" />
+         <input placeholder="Passwrord Reset Answer" type="text" name="reset_ans" />
+         <input class="submit" type="submit" />
+      </form>
+       <p>{{ message }}</p>
+   </div>
+ </div>
+ 
+{% endblock main %}

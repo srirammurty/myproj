@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+        <title>Flask App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/css/jquery.css" >
+        <link rel="stylesheet" href="static/css/jqueryui.css" >
+        <link rel="stylesheet" href="static/css/bootstrap.css" >
+        <link rel="stylesheet" href="static/css/style.css" >
+    </head>
+    <body>
+        <div class="menu-bar">
+            <div class="menu-item">
+                <a href="/about">About Us</a>
+            </div>
+            <div class="menu-item">
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <a href="/terms">Terms of Use</a>
+            </div>
+            <div class="menu-item">
+                <a href="/privacy">Privacy</a>
+            </div>
+            <div class="menu-item">
+                <a href="/admin">Admin</a>
+            </div>
+            <!--
+            <div class="menu-item" style="float:right">
+                {{g.loginstatus}}
+            </div>
+            -->
+        </div>
+
+        <div>
+            {% block main %}
+                <h1> This shows up only in structure.html</h1>
+            {% endblock main %}
+        </div>
+    </body>
+</html>
+    

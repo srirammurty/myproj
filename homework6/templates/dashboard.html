@@ -1,0 +1,28 @@
+{% extends  "structure.html" %}
+{% block main %}
+    <h4 style="margin:10px;color:white"> {{ message }} </h4>
+    <div class="form-additem" style="margin:auto">
+        <div style="width: 50%;margin:10px">
+            <ul class="list-group">
+            <li class="list-group-item"><h4><b>Todo List</b></h4></li>
+            {#    loop through galaxies and render them in list#}
+            {% for each_item in items %}
+                <li class="list-group-item"><a href="#">{{ each_item['item'] }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    
+        <form action="/add_item" method="post">
+            <div class="form-floating" style="display:flex">
+                <div class="form-additem">
+                    <input type="text" name="new_item" class="form-control" id="add-item" placeholder="enter a todo">
+                </div>
+                <div style="margin:15px">
+                    <button class="btn  btn-primary" type="submit">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+ <a style="margin:10px;text-decoration:none;color:white;font-weight:bold" href="/logout">Logout</a>
+ 
+{% endblock main %}
